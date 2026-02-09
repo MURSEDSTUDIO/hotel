@@ -57,7 +57,7 @@ a {
   border-bottom: 2px solid #d4af37;
 }
 
-/* ===== HAMBURGER (hidden on desktop) ===== */
+/* ================= HAMBURGER ================= */
 .menu-toggle {
   display: none;
   background: none;
@@ -82,11 +82,14 @@ a {
 .hero-img {
   width: 100%;
   height: 800px;
-  background: #eaeaea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-text {
@@ -125,14 +128,17 @@ a {
   font-size: 14px;
 }
 
-/* ================= COMMON ================= */
+/* ================= COMMON IMAGE FIX ================= */
 .img {
   background: #eaeaea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #555;
+  overflow: hidden;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .center-text {
@@ -141,13 +147,12 @@ a {
   font-size: 18px;
 }
 
-/* ================= SPLIT SECTIONS ================= */
+/* ================= SPLIT SECTIONS (ALIGNMENT FIX) ================= */
 .split {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 80px;
   padding: 100px 80px;
+  align-items: stretch;
 }
 
 .split.reverse {
@@ -156,6 +161,18 @@ a {
 
 .split .text {
   max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  border-left: 2px solid #e0e0e0;
+}
+
+.split.reverse .text {
+  padding-left: 0;
+  padding-right: 20px;
+  border-left: none;
+  border-right: 2px solid #e0e0e0;
 }
 
 .split h2 {
@@ -201,7 +218,7 @@ a {
 .room-card .img {
   width: 100%;
   height: 450px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .room-card h3 {
@@ -242,7 +259,6 @@ a {
 /* ================= CONTACT ================= */
 .contact-wrap {
   display: flex;
-  justify-content: space-between;
   gap: 100px;
   padding: 100px 80px;
 }
@@ -276,30 +292,7 @@ a {
   font-size: 14px;
 }
 
-.footer a {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.newsletter {
-  display: flex;
-  margin-top: 10px;
-}
-
-.newsletter input {
-  padding: 8px;
-}
-
-.newsletter button {
-  padding: 8px 14px;
-  background: #d4af37;
-  border: none;
-  cursor: pointer;
-}
-
 /* ================= RESPONSIVE ================= */
-
-/* TABLET */
 @media (max-width: 1024px) {
   .split,
   .contact-wrap {
@@ -310,11 +303,9 @@ a {
 
   .hero-text {
     left: 40px;
-    max-width: 90%;
   }
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -343,20 +334,11 @@ a {
     margin: 15px 0;
   }
 
-  .hero {
-    display: flex;
-    flex-direction: column;
-  }
-
   .hero-text {
     position: static;
     padding: 40px 20px;
     color: #0f1f3d;
     text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 48px;
   }
 
   .hero-img {
@@ -369,16 +351,15 @@ a {
     text-align: center;
   }
 
-  .split .img {
-    width: 100%;
-    height: auto;
-    min-height: 260px;
+  .split .text,
+  .split.reverse .text {
+    border: none;
+    padding: 0;
   }
 
-  .room-card,
-  .facility,
-  .contact-wrap {
-    padding: 60px 30px;
+  .split .img {
+    width: 100%;
+    height: 320px;
   }
 
   .form {
@@ -389,37 +370,5 @@ a {
     flex-direction: column;
     gap: 30px;
     padding: 50px 30px;
-  }
-}
-
-/* SMALL MOBILE */
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 38px;
-  }
-
-  .hero-text h1 span {
-    font-size: 30px;
-  }
-
-  .page-title {
-    font-size: 28px;
-    padding: 60px 15px;
-  }
-
-  .room-actions {
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-  }
-
-  .newsletter {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .newsletter input,
-  .newsletter button {
-    width: 100%;
   }
 }
