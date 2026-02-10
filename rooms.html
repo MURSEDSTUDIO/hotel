@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rooms | Luxury Hotels</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+<!-- PAGE LOADER -->
+<div class="page-loader">
+  <div class="loader-spinner"></div>
+</div>
+
+<!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">LUXURY<br><span>HOTELS</span></div>
 
@@ -22,46 +30,100 @@
   </nav>
 </header>
 
-<section class="page-title">ROOMS AND RATES</section>
+<!-- PAGE TITLE WITH INTRO -->
+<section class="page-title">
+  <h1>ROOMS AND RATES</h1>
+  <p class="page-intro">
+    Each of our bright, light-flooded rooms come with everything you could 
+    possibly need for a comfortable stay. And yes, comfort isn't our only 
+    objective, we also value good design, sleek contemporary furnishing 
+    complemented by the rich tones of nature's palette as visible from our 
+    rooms' sea-view windows and terraces.
+  </p>
+</section>
 
-<section class="room-card">
+<!-- SINGLE ROOM -->
+<section class="room-card scroll-reveal">
   <div class="img">
-    <img src="singal room.jpg">
+    <img src="singal room.jpg" alt="Single Room">
   </div>
   <h3>SINGLE ROOM</h3>
   <div class="room-actions">
-    <a href="#">VIEW ROOM DETAILS</a>
-    <span>$147 Avg/night</span>
+    <a href="#" class="room-link">VIEW ROOM DETAILS</a>
+    <span class="room-price">$147 Avg/Night</span>
   </div>
 </section>
 
-<section class="room-card">
+<!-- DOUBLE ROOM -->
+<section class="room-card scroll-reveal">
   <div class="img">
-    <img src="double room.jpg">
+    <img src="double room.jpg" alt="Double Room">
   </div>
   <h3>DOUBLE ROOM</h3>
   <div class="room-actions">
-    <a href="#">VIEW ROOM DETAILS</a>
-    <span>$155 Avg/night</span>
+    <a href="#" class="room-link">VIEW ROOM DETAILS</a>
+    <span class="room-price">$155 Avg/Night</span>
   </div>
 </section>
 
-<section class="room-card">
+<!-- TWIN ROOM -->
+<section class="room-card scroll-reveal">
   <div class="img">
-    <img src="twin room.jpg">
+    <img src="twin room.jpg" alt="Twin Room">
   </div>
   <h3>TWIN ROOM</h3>
   <div class="room-actions">
-    <a href="#">VIEW ROOM DETAILS</a>
-    <span>$155 Avg/night</span>
+    <a href="#" class="room-link">VIEW ROOM DETAILS</a>
+    <span class="room-price">$155 Avg/Night</span>
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section class="testimonial scroll-reveal">
+  <h2>Testimonials</h2>
+  <div class="testimonial-content">
+    <button class="testimonial-arrow left" aria-label="Previous testimonial">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    
+    <div class="testimonial-text">
+      <p>"Calm, Serene, Retro – What a way to relax and enjoy"</p>
+      <span>Mr. and Mrs. Baxter, UK</span>
+    </div>
+    
+    <button class="testimonial-arrow right" aria-label="Next testimonial">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
-  <div>
+  <div class="footer-section">
     <strong>LUXURY HOTELS</strong><br>
     497 Evergreen Rd, Roseville, CA 95673<br>
+    Phone: 00000000<br>
     mursedalam526@gmail.com
+  </div>
+
+  <div class="footer-section footer-links">
+    <a href="#">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Terms & Conditions</a>
+    
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <p>Subscribe to our newsletter</p>
+    <div class="newsletter">
+      <input type="email" placeholder="Email Address" required>
+      <button type="button">Ok</button>
+    </div>
   </div>
 </footer>
 
