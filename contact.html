@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Luxury Hotels</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+<!-- PAGE LOADER -->
+<div class="page-loader">
+  <div class="loader-spinner"></div>
+</div>
+
+<!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">LUXURY<br><span>HOTELS</span></div>
 
@@ -22,28 +30,55 @@
   </nav>
 </header>
 
-<section class="page-title">CONTACT US</section>
+<!-- PAGE TITLE -->
+<section class="page-title">
+  <h1>CONTACT US</h1>
+</section>
 
+<!-- CONTACT FORM & INFO -->
 <section class="contact-wrap">
-  <div class="info">
+  <div class="info scroll-reveal">
     <h3>WE ARE HERE FOR YOU</h3>
     <p>497 Evergreen Rd, Roseville, CA 95673</p>
     <p>Phone: +910000000000</p>
     <p>Email: mursedalam526@gmail.com</p>
   </div>
 
-  <form class="form">
-    <input type="text" placeholder="Name">
-    <input type="email" placeholder="Email Address">
-    <textarea placeholder="Message"></textarea>
-    <button type="submit">Submit</button>
+  <form class="form scroll-reveal">
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <textarea placeholder="Message" required></textarea>
+    <button type="submit" class="btn">Submit</button>
   </form>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
-  <div>
+  <div class="footer-section">
     <strong>LUXURY HOTELS</strong><br>
-    497 Evergreen Rd, Roseville, CA 95673
+    497 Evergreen Rd, Roseville, CA 95673<br>
+    Phone: 00000000<br>
+    mursedalam526@gmail.com
+  </div>
+
+  <div class="footer-section footer-links">
+    <a href="#">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Terms & Conditions</a>
+    
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <p>Subscribe to our newsletter</p>
+    <div class="newsletter">
+      <input type="email" placeholder="Email Address" required>
+      <button type="button">Ok</button>
+    </div>
   </div>
 </footer>
 
