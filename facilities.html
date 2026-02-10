@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Facilities | Luxury Hotels</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+<!-- PAGE LOADER -->
+<div class="page-loader">
+  <div class="loader-spinner"></div>
+</div>
+
+<!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">LUXURY<br><span>HOTELS</span></div>
 
@@ -22,40 +30,111 @@
   </nav>
 </header>
 
-<section class="page-title">FACILITIES</section>
+<!-- PAGE TITLE WITH INTRO -->
+<section class="page-title">
+  <h1>FACILITIES</h1>
+  <p class="page-intro">
+    We want your stay at our hotel to be truly memorable. That is why we offer 
+    a wide range of quality facilities and services, designed to make sure every 
+    guest has a comfortable and enjoyable visit. All of our facilities have been 
+    created with our guests' needs in mind.
+  </p>
+</section>
 
-<section class="facility">
+<!-- THE GYM -->
+<section class="facility scroll-reveal">
   <div class="img">
-    <img src="gym.jpg">
+    <img src="gym.jpg" alt="Hotel Gym">
   </div>
   <h3>THE GYM</h3>
 </section>
 
-<section class="facility">
+<!-- POOLSIDE BAR -->
+<section class="facility scroll-reveal">
   <div class="img">
-    <img src="bar.jpg">
+    <img src="bar.jpg" alt="Poolside Bar">
   </div>
-  <h3>POOL SIDE BAR</h3>
+  <h3>POOLSIDE BAR</h3>
 </section>
 
-<section class="facility">
+<!-- THE SPA -->
+<section class="facility scroll-reveal">
   <div class="img">
-    <img src="spa.jpg">
+    <img src="spa.jpg" alt="Hotel Spa">
   </div>
   <h3>THE SPA</h3>
 </section>
 
-<section class="facility">
+<!-- SWIMMING POOL -->
+<section class="facility scroll-reveal">
   <div class="img">
-    <img src="restaurant.jpg">
+    <img src="pool.jpg" alt="Swimming Pool">
+  </div>
+  <h3>SWIMMING POOL</h3>
+</section>
+
+<!-- RESTAURANT -->
+<section class="facility scroll-reveal">
+  <div class="img">
+    <img src="restaurant.jpg" alt="Hotel Restaurant">
   </div>
   <h3>RESTAURANT</h3>
 </section>
 
+<!-- LAUNDRY -->
+<section class="facility scroll-reveal">
+  <div class="img">
+    <img src="laundry.jpg" alt="Laundry Service">
+  </div>
+  <h3>LAUNDRY</h3>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonial scroll-reveal">
+  <h2>Testimonials</h2>
+  <div class="testimonial-content">
+    <button class="testimonial-arrow left" aria-label="Previous testimonial">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    
+    <div class="testimonial-text">
+      <p>"Calm, Serene, Retro – What a way to relax and enjoy"</p>
+      <span>Mr. and Mrs. Baxter, UK</span>
+    </div>
+    
+    <button class="testimonial-arrow right" aria-label="Next testimonial">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
-  <div>
+  <div class="footer-section">
     <strong>LUXURY HOTELS</strong><br>
-    497 Evergreen Rd, Roseville, CA 95673
+    497 Evergreen Rd, Roseville, CA 95673<br>
+    Phone: 00000000<br>
+    mursedalam526@gmail.com
+  </div>
+
+  <div class="footer-section footer-links">
+    <a href="#">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Terms & Conditions</a>
+    
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <p>Subscribe to our newsletter</p>
+    <div class="newsletter">
+      <input type="email" placeholder="Email Address" required>
+      <button type="button">Ok</button>
+    </div>
   </div>
 </footer>
 
