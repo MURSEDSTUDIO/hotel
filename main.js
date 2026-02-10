@@ -1,6 +1,4 @@
-/* ===============================
-   1️⃣ FORM – dummy submit
-   =============================== */
+/* FORM – dummy submit */
 document.querySelectorAll("form").forEach(form => {
   form.addEventListener("submit", e => {
     e.preventDefault();
@@ -8,10 +6,7 @@ document.querySelectorAll("form").forEach(form => {
   });
 });
 
-
-/* ===============================
-   2️⃣ MOBILE NAV – hamburger toggle
-   =============================== */
+/* MOBILE NAV */
 document.querySelectorAll(".menu-toggle").forEach(toggle => {
   toggle.addEventListener("click", () => {
     const nav = toggle.parentElement.querySelector("nav");
@@ -19,29 +14,10 @@ document.querySelectorAll(".menu-toggle").forEach(toggle => {
   });
 });
 
-
-/* ===============================
-   3️⃣ MOBILE NAV – auto close on link click
-   (UX clean ho jata hai)
-   =============================== */
+/* AUTO CLOSE */
 document.querySelectorAll(".navbar nav a").forEach(link => {
   link.addEventListener("click", () => {
     const nav = link.closest("nav");
-    if (nav.classList.contains("open")) {
-      nav.classList.remove("open");
-    }
+    nav.classList.remove("open");
   });
-});
-
-
-/* ===============================
-   4️⃣ SAFETY – close menu on resize
-   (mobile → desktop bug avoid)
-   =============================== */
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 768) {
-    document.querySelectorAll(".navbar nav").forEach(nav => {
-      nav.classList.remove("open");
-    });
-  }
 });
